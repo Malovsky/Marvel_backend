@@ -16,6 +16,9 @@ app.use(userRoutes);
 const personnagesRoutes = require("./routes/Personnages_routes");
 app.use(personnagesRoutes);
 
+const comicsRoutes = require("./routes/Comics_routes");
+app.use(comicsRoutes);
+
 // app.get("/*", (req, res) =>
 //   res.status(404).json({
 //     error: {
