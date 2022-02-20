@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(formidable());
 app.use(cors());
+// MONGO_DB_URI=mongodb://localhost/marvel
 mongoose.connect(process.env.MONGO_DB_URI);
 
 const userRoutes = require("./routes/User_routes");
@@ -19,7 +20,7 @@ app.use(personnagesRoutes);
 const comicsRoutes = require("./routes/Comics_routes");
 app.use(comicsRoutes);
 
-// app.get("/*", (req, res) =>
+// app.*("/*", (req, res) =>
 //   res.status(404).json({
 //     error: {
 //       message: "Cette route n'existe pas.",
